@@ -21,9 +21,10 @@
 </head>
 <body style="background-image: url('img/fondo_pantalla.jpg'); background-position: center;">
     <div id="app">
-        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: transparent!important; 
+            border-color: transparent!important; box-shadow: none!important">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" id="dashboard-navbar">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -41,7 +42,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" id="nav-item-login">{{ __('Login') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -65,11 +66,19 @@
                     </ul>
                 </div>
             </div>
+<<<<<<< HEAD
         </nav> --}}
         @yield('content')
         <!-- <main class="py-4">
             
         </main> -->
+=======
+        </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+>>>>>>> origin/master
     </div>
     <script src="{{ asset('js/jquery-1.10.2.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/main.js') }}"></script>

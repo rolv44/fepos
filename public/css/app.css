@@ -11652,3 +11652,38 @@ a.text-dark:focus {
   }
 }
 
+input#user::-webkit-input-placeholder,
+input#password::-webkit-input-placeholder,
+a#dashboard-navbar,
+a#nav-item-login {
+  color: #d4d3d3;
+}
+
+input#user::-moz-placeholder,
+input#password::-moz-placeholder,
+a#dashboard-navbar,
+a#nav-item-login {
+  color: #d4d3d3;
+}
+
+input#user:-ms-input-placeholder,
+input#password:-ms-input-placeholder,
+a#dashboard-navbar,
+a#nav-item-login {
+  color: #d4d3d3;
+}
+
+input#user::-ms-input-placeholder,
+input#password::-ms-input-placeholder,
+a#dashboard-navbar,
+a#nav-item-login {
+  color: #d4d3d3;
+}
+
+input#user::placeholder,
+input#password::placeholder,
+a#dashboard-navbar,
+a#nav-item-login {
+  color: #d4d3d3;
+}
+
