@@ -19,5 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/user/login', 'UserController@checklogin')->name('checklogin');
 // Rutas alternas
 Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
