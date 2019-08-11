@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBillersTable extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateBillersTable extends Migration
      */
     public function up()
     {
-        Schema::create('billers', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->integer('id');
             $table->string('name', 55);
             $table->string('company', 255);
@@ -21,11 +21,14 @@ class CreateBillersTable extends Migration
             $table->string('city', 55);
             $table->string('state', 55);
             $table->string('postal_code', 8);
-            $table->string('country', 55);
+            $table->string('country', 55)->default('CR');
             $table->string('phone', 20);
             $table->string('email', 100);
-            $table->string('logo', 100);
-            $table->text('invoice_footer');
+            $table->tinyInteger('provincia')->nullable();
+            $table->string('canton', 2)->nullable();
+            $table->string('distrito', 2)->nullable();
+            $table->string('barrio', 3)->nullable();
+            $table->string('senas', 200)->nullable();
             $table->string('cf1', 100)->nullable();
             $table->string('cf2', 100)->nullable();
             $table->string('cf3', 100)->nullable();
@@ -42,6 +45,6 @@ class CreateBillersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billers');
+        Schema::dropIfExists('customers');
     }
 }
