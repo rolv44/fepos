@@ -16,9 +16,23 @@ class UserController extends Controller
         //
     }
 
+    public function checklogin1(Request $request)
+    {
+        $r=array("code"=>20000,"data"=>array(
+            "avatar"=>"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif",
+            "introduction"=>"I am a super administrator",
+            "name"=>"Super Admin",
+            "roles"=>array("admin")
+        ));
+        return json_encode($r);
+    }
+
     public function checklogin(Request $request)
     {
-        var_dump($request['loginForm']);
+        // var_dump($request['loginForm']);
+        // echo "<hr>HELLO WORLD<hr>";
+        // var_dump($request->data);
+        // var_dump($_POST);
 
     //  $user_data = array(
     //   'user'  => $request->get('user'),
@@ -33,7 +47,9 @@ class UserController extends Controller
     //  {
     // //   return back()->with('error', 'Wrong Login Details');
     //  }
-
+        // $t=makeRandomTokenKey();  str_random(56)
+        $r=array("code"=>20000,"data"=>array("token"=>"admin-token"));
+        return json_encode($r);
     }
 
     function logout()

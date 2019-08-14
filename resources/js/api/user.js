@@ -3,15 +3,16 @@ import request from '@/utils/request'
 export function login(data) {
   // console.log(data)
   return request({
-    url: '/user/login',
+    url: '/login',
     method: 'post',
     data
   })
 }
 
 export function getInfo(token) {
+  // console.log("desde tokenizer",token)
   return request({
-    url: '/user/info',
+    url: '/info',
     method: 'get',
     params: { token }
   })

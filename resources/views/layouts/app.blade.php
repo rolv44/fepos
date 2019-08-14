@@ -66,19 +66,11 @@
                     </ul>
                 </div>
             </div>
-<<<<<<< HEAD
-        </nav> --}}
-        @yield('content')
-        <!-- <main class="py-4">
-            
-        </main> -->
-=======
         </nav>
 
         <main class="py-4">
             @yield('content')
         </main>
->>>>>>> origin/master
     </div>
     <script src="{{ asset('js/jquery-1.10.2.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/main.js') }}"></script>

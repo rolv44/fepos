@@ -170,6 +170,7 @@ export default {
               this.loading = false
             })
             .catch(() => {
+              console.log("Fail")
               this.loading = false
             })
         } else {

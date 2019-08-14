@@ -32,13 +32,16 @@ const actions = {
   // user login
   login({ commit }, userInfo) {
     const { username, password } = userInfo
+    // console.log("holaaaaaa",userInfo)
     return new Promise((resolve, reject) => {
       login({ username: username.trim(), password: password }).then(response => {
         const { data } = response
+        // console.log("exito en login",data.token)
         commit('SET_TOKEN', data.token)
         setToken(data.token)
         resolve()
       }).catch(error => {
+        console.log("error en login",error)
         reject(error)
       })
     })
@@ -46,10 +49,12 @@ const actions = {
 
   // get user info
   getInfo({ commit, state }) {
+    // console.log("state000",state)
     return new Promise((resolve, reject) => {
+      // console.log("state",state)
       getInfo(state.token).then(response => {
         const { data } = response
-
+        console.log("exitosoooo",response)
         if (!data) {
           reject('Verification failed, please Login again.')
         }
@@ -67,6 +72,7 @@ const actions = {
         commit('SET_INTRODUCTION', introduction)
         resolve(data)
       }).catch(error => {
+        console.log("error",error)
         reject(error)
       })
     })

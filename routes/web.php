@@ -19,9 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
-Route::post('/user/login', 'UserController@checklogin')->name('checklogin');
-=======
+Route::post('/login', 'UserController@checklogin')->name('checklogin');
+Route::get('/info', 'UserController@checklogin1')->name('checklogin1');
 Route::resources([
     'billers' => 'BillersController', // Billers
     'categories' => 'CategoriesController', // Categories
@@ -44,6 +43,5 @@ Route::resources([
     'subcategories' => 'SubcategoriesController', // Subcategories
 ]);
 
->>>>>>> origin/master
 // Rutas alternas
 Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');

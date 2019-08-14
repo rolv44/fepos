@@ -256,6 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 
             _this2.loading = false;
           })["catch"](function () {
+            console.log("Fail");
             _this2.loading = false;
           });
         } else {
