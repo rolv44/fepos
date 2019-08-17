@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/login', 'UserController@checklogin')->name('checklogin');
+Route::post('/logout', 'UserController@cerrarSesion')->name('logout');
 Route::get('/info', 'UserController@checklogin1')->name('checklogin1');
 Route::resources([
     'billers' => 'BillersController', // Billers

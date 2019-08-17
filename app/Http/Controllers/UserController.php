@@ -52,10 +52,12 @@ class UserController extends Controller
         return json_encode($r);
     }
 
-    function logout()
+    function cerrarSesion(Request $request)
     {
-     Auth::logout();
-     return redirect('login');
+    //  Auth::logout();
+    //  return redirect('login');
+        $r=array("code"=>20000,"data"=>"success");
+        return json_encode($r);
     }
 
     /**

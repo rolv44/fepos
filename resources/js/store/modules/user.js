@@ -81,6 +81,7 @@ const actions = {
   // user logout
   logout({ commit, state }) {
     return new Promise((resolve, reject) => {
+      console.log("logout: ",commit, state)
       logout(state.token).then(() => {
         commit('SET_TOKEN', '')
         commit('SET_ROLES', [])
@@ -88,6 +89,7 @@ const actions = {
         resetRouter()
         resolve()
       }).catch(error => {
+        console.log("Error logout!!",error)
         reject(error)
       })
     })
