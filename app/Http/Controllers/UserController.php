@@ -52,6 +52,11 @@ class UserController extends Controller
         return json_encode($r);
     }
 
+    function list(){
+        $r=array("code"=>20000,"data"=>array("total"=>"2","items"=>array()));
+        return json_encode($r);
+    }
+
     function cerrarSesion(Request $request)
     {
     //  Auth::logout();

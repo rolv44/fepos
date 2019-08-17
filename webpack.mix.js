@@ -16,8 +16,26 @@ mix.webpackConfig({
         alias: {
             '@':  path.resolve('resources/js')
          }
-       }
+       },
+    module: {
+        rules: [
+            {
+                test: /\.svg$/,
+                use: [ 'svg-sprite-loader']
+            }
+        ]
+    }
     });
+
+
+    // loader: 'svg-sprite-loader',
+    //             include:[
+    //                 path.resolve(__dirname, 'resources/js/icons')
+    //             ],
+    //             options: {
+    //                 name: 'icon-[name]',
+    //                 publicPath: 'resources/js/icons' // notice this customization
+    //             }
 
 mix.js('resources/js/main.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
